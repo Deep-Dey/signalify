@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block body%}
+<div>
+    <div class="info-text">
+        <p class="fw-bold fs-4 text-center" style="margin-top: 10px;">Upload Traffic signal Image</p>
+    </div>
+    <img src='static/img/default_img.jpg' id='myImg' class='rounded mx-auto d-block' alt='Image not found'
+        height='250px' width='250px'>
+
+    <div class="input-group mx-auto" style="width: 250px; padding-top: 20px;">
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" class="form-control" id="inputGroupFile04" accept=".png, .jpg, .jpeg"
+                aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+            <div class="d-grid gap-2 mx-auto" style="width: 250px; padding-top: 5px;">
+                <button class="btn btn-primary" id="btn-predict" type="submit" style="display: none;">Button</button>
+            </div>
+        </form>
+    </div>
+    <div class=" mx-auto" id="loading" style="display: none; width: 40px; margin-top: 5px;">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <p id="result" class="fw-bold fs-5 text-center">{{output}}</p>
+</div>
+
+<script>
+    window.addEventListener('load', function () {
+        document.querySelector('input[type="file"]').addEventListener('change', function () {
+            var img = document.getElementById("myImg");
+            img.src = URL.createObjectURL(this.files[0]);
+
+            document.getElementById("result").innerHTML = "";
+            document.getElementById("btn-predict").style.display = "inline";
+
+            document.getElementById("btn-predict").addEventListener('click', function () {
+                document.getElementById("loading").style.display = "block";
+            })
+        });
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block body%}
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 50px;">
+
+    <img src="https://img.icons8.com/flat_round/64/000000/traffic-light--v1.png" class='rounded mx-auto d-block'
+        alt='Image not found' style="margin-top: 10px;">
+    <p class="h1">Signalify</p>
+    <p>This application takes images of any kind of traffic signals and detect the meaning of the
+        signal. It is bassically an implementation of Deep Neural Network using CNN (Convolutional Neural Network)
+        on <a href="https://www.kaggle.com/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign">GTSRB (German
+            Traffic Sign Recognition Benchmark)</a> dataset using Pytorch and flask.</p>
+
+    <div>
+        <p class="h4">What is GTSRB?</p>
+        <p>The German Traffic Sign Benchmark is a multi-class, single-image classification challenge
+            held at the International Joint Conference on Neural Networks (IJCNN) 2011. We cordially invite researchers
+            from relevant fields to participate: The competition is designed to allow for participation without special
+            domain knowledge. Our benchmark has the following properties:</p>
+        <ul>
+            <li>Single-image, multi-class classification problem</li>
+            <li>Total 43 classes</li>
+            <li>More than 50,000 images in total</li>
+        </ul>
+
+        <p class="h4">What is Pytorch?</p>
+        <p>PyTorch is an optimized tensor library for deep learning using GPUs and CPUs. It is an open source machine
+            learning library based on the Torch library, used for applications such as
+            computer vision and natural language processing, primarily developed by Facebook's AI Research lab. It is
+            free and open-source software released under the Modified BSD license. <br>
+            For more info visit: <a href="https://pytorch.org/">pytorch.org</a></p>
+
+        <p class="h4">What is Flask?</p>
+        <p>Flask is a micro web framework written in Python. It is classified as a microframework because it does not
+            require particular tools or libraries. Extensions exist for object-relational mappers, form validation,
+            upload handling, various open authentication technologies and several common framework related tools.
+            Applications that use the Flask framework include Pinterest and LinkedIn. The microframework Flask is based
+            on the Pocoo projects, Werkzeug and Jinja2. <br>For more info visit: <a
+                href="https://flask.palletsprojects.com/en/1.1.x/">flask.palletsprojects.com</a></p>
+
+        <p class="h4">What are the Pros?</p>
+        <ul>
+            <li>In real world it can classify 43 types of Traffic signs meaning from any image (jpg, png, jpeg)</li>
+            <li>It beacame really handy when one needs to know a meaning of Traffic sign</li>
+        </ul>
+
+        <p class="h4">What are the Cons?</p>
+        <ul>
+            <li>There are over one thousand traffic signs in German traffic code but it detects only 43 types.</li>
+            <li>Though the CNN model accuracy is very hign but sometime it gives wrong prediction for a given image.
+            </li>
+            <li>There is no direct camera feature to capture images. One needs to take a picture and then upload to the
+                application</li>
+        </ul>
+
+        <p class="h4">What are the Future Scope?</p>
+        <ul>
+            <li>Make CNN model more accurate for different type of images</li>
+            <li>Add camera feature to capture direct images from camera.</li>
+            <li>Include new features like identification from real-time videos or live videos.</li>
+        </ul>
+
+    </div>
+</div>
+{% endblock %}
