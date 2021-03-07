@@ -1,10 +1,16 @@
 {% extends 'base.html' %}
 {% block body%}
-<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 50px;">
+<div style="display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    margin-bottom: 50px; 
+    margin-left: 5px;
+    color: rgba(255, 255, 255, 0.8);">
 
-    <img src="https://img.icons8.com/flat_round/64/000000/traffic-light--v1.png" class='rounded mx-auto d-block'
-        alt='Image not found' style="margin-top: 10px;">
-    <p class="h1">Signalify</p>
+    <img src="static/img/logo.png" class='rounded mx-auto d-block' alt='Image not found' style="margin-top: 20px;">
+    <p class="h1">SIGNALIFY</p>
+
     <p>This application takes images of any kind of traffic signals and detect the meaning of the
         signal. It is bassically an implementation of Deep Neural Network using CNN (Convolutional Neural Network)
         on <a href="https://www.kaggle.com/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign">GTSRB (German
@@ -58,7 +64,27 @@
             <li>Add camera feature to capture direct images from camera.</li>
             <li>Include new features like identification from real-time videos or live videos.</li>
         </ul>
-
     </div>
+
+    <a href="https://drive.google.com/file/d/1b41oZi1RB3732-RzIBnjyksbDNS1zXFM/view?usp=sharing">
+        <img src="static/img/qr-code.png" alt="QR Code" width="100px">
+    </a>
+    <p>Scan or Click to download This app</p>
 </div>
+<footer class="text-center text-lg-start fixed-bottom bg-dark" style="margin-bottom: -6px;">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="margin-top: -6px;">
+        <a class="text-dark" href="https://deep-dey.github.io/Port-folio/">
+            <span style="color: rgba(255, 255, 255, 1)">Copyright © 2021 Deep. All rights reserved</span>
+        </a>
+    </div>
+    <!-- Copyright -->
+</footer>
+
+<style>
+    a {
+        color: crimson;
+        text-decoration: none;
+    }
+</style>
 {% endblock %}
