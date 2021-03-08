@@ -64,9 +64,72 @@
             <li>Add camera feature to capture direct images from camera.</li>
             <li>Include new features like identification from real-time videos or live videos.</li>
         </ul>
+
+        <p class="h4">Signs that we can recognize using singnalify are:</p>
+        <ul class="sign-list" style="list-style-type:none; display: flex; justify-content: space-around;">
+            <li>
+                <ul>
+                    <li>Speed limit (20km/h)</li>
+                    <li>Speed limit (30km/h)</li>
+                    <li>Speed limit (50km/h)</li>
+                    <li>Speed limit (60km/h)</li>
+                    <li>Speed limit (70km/h)</li>
+                    <li>Speed limit (80km/h)</li>
+                    <li>End of speed limit (80km/h)</li>
+                    <li>Speed limit (100km/h)</li>
+                    <li>Speed limit (120km/h)</li>
+                    <li>No passing</li>
+                    <li>No passing veh over 3.5 tons</li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li>Right-of-way at intersection</li>
+                    <li>Priority road</li>
+                    <li>Yield</li>
+                    <li>Stop</li>
+                    <li>No vehicles</li>
+                    <li>Vehicle > 3.5 tons prohibited</li>
+                    <li>No entry</li>
+                    <li>General caution</li>
+                    <li>Dangerous curve left</li>
+                    <li>Dangerous curve right</li>
+                    <li>Double curve</li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li>Bumpy road</li>
+                    <li>Slippery road</li>
+                    <li>Road narrows on the right</li>
+                    <li>Road work</li>
+                    <li>Traffic signals</li>
+                    <li>Pedestrians</li>
+                    <li>Children crossing</li>
+                    <li>Bicycles crossing</li>
+                    <li>Beware of ice/snow</li>
+                    <li>Wild animals crossing</li>
+                    <li>End speed + passing limits</li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li>Turn right ahead</li>
+                    <li>Turn left ahead</li>
+                    <li>Ahead only</li>
+                    <li>Go straight or right</li>
+                    <li>Go straight or left</li>
+                    <li>Keep right</li>
+                    <li>Keep left</li>
+                    <li>Roundabout mandatory</li>
+                    <li>End of no passing</li>
+                    <li>End no passing vehicle > 3.5 tons</li>
+                </ul>
+            </li>
+        </ul>
     </div>
 
-    <a href="https://drive.google.com/file/d/1b41oZi1RB3732-RzIBnjyksbDNS1zXFM/view?usp=sharing">
+    <a href="https://drive.google.com/file/d/1bui4SEESrZd1Q2solpdcwNAu3SMLjunM/view?usp=sharing">
         <img src="static/img/qr-code.png" alt="QR Code" width="100px">
     </a>
     <p>Scan or Click to download This app</p>
@@ -85,6 +148,12 @@
     a {
         color: crimson;
         text-decoration: none;
+    }
+
+    @media all and (max-width: 750px) {
+        .sign-list {
+            flex-direction: column;
+        }
     }
 </style>
 {% endblock %}
