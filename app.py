@@ -34,5 +34,6 @@ def upload():
     return render_template('index.html', output=result)
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# Disable during deployment
+# if __name__ == "__main__":
+#     app.run(debug=True)
